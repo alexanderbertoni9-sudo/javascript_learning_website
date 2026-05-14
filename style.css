@@ -1,0 +1,18 @@
+:root{
+    --bg: #fae8b4;
+    --text: #574a24;
+}
+
+:root.dark{
+    --bg:#574a24;
+    --text:#fae8b4;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+button{
+    color
+}

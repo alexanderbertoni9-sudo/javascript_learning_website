@@ -1,18 +1,60 @@
 :root{
-    --bg: #fae8b4;
-    --text: #574a24;
+    --bg:#B7D5D4;
+    --text:#488286;
+    --buttonBg: #B7D5D4;
+    --buttonText: #373E40;
 }
 
 :root.dark{
-    --bg:#574a24;
-    --text:#fae8b4;
+    --bg: #488286;
+    --text: #B7D5D4;
+    --buttonBg: #373E40;
+    --buttonText: #B7D5D4;
 }
 
 body{
     background-color: var(--bg);
     color: var(--text);
+    margin: 0;
+    padding: 0;
 }
 
 button{
-    color
+    background-color: var(--buttonBg);
+    color: var(--buttonText);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    background-color: var(--text);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    list-style:none;
+    position: relative;
+}
+
+
+ul li {
+    float:left;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    background-color: black;
+}
+
+.logo{
+    height:50px;
+    width:auto;
+    display: block;
+    padding: 0 10px;
 }

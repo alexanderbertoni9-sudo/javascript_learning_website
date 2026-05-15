@@ -4,24 +4,90 @@
     src: url('./assets/fonts/GoogleSans-VariableFont_GRAD\,opsz\,wght.ttf')
 }
 
-
-:root{
-    --bg:#B7D5D4;
-    --text:#488286;
-    --buttonBg: #B7D5D4;
-    --buttonText: #373E40;
-    font-family: 'Google-Sans';
+/* Color Themes and stuff*/
+:root { /* Red - default */
+    --bg: #FADADD;
+    --text: #C0394B;
+    --buttonBg: #C0394B;
+    --buttonText: #FFFFFF;
+    --navBg: #7B1A26;
+    --navText: #FADADD;
+    --navHover: #4A0D15;
 }
 
-:root.dark{
-    --bg: #488286;
-    --text: #B7D5D4;
-    --buttonBg: #373E40;
-    --buttonText: #B7D5D4;
+:root.blue {
+    --bg: #D6EAF8;
+    --text: #1A6FA8;
+    --buttonBg: #1A6FA8;
+    --buttonText: #FFFFFF;
+    --navBg: #0D3B5E;
+    --navText: #D6EAF8;
+    --navHover: #07202F;
+}
+
+:root.yellow {
+    --bg: #FEF9E7;
+    --text: #B8860B;
+    --buttonBg: #B8860B;
+    --buttonText: #FFFFFF;
+    --navBg: #6E5200;
+    --navText: #FEF9E7;
+    --navHover: #3D2D00;
+}
+
+:root.green {
+    --bg: #D5F5E3;
+    --text: #1E8449;
+    --buttonBg: #1E8449;
+    --buttonText: #FFFFFF;
+    --navBg: #0B3D20;
+    --navText: #D5F5E3;
+    --navHover: #062B12;
+}
+
+:root.dark {
+    --bg: #5C1A22;
+    --text: #FADADD;
+    --buttonBg: #8B2535;
+    --buttonText: #FFFFFF;
+    --navBg: #1A0005;
+    --navText: #FADADD;
+    --navHover: #0D0002;
+}
+
+:root.blue.dark {
+    --bg: #0D3B5E;
+    --text: #D6EAF8;
+    --buttonBg: #1A6FA8;
+    --buttonText: #FFFFFF;
+    --navBg: #051520;
+    --navText: #D6EAF8;
+    --navHover: #020A10;
+}
+
+:root.yellow.dark {
+    --bg: #6E5200;
+    --text: #FEF9E7;
+    --buttonBg: #B8860B;
+    --buttonText: #FFFFFF;
+    --navBg: #2A1F00;
+    --navText: #FEF9E7;
+    --navHover: #110C00;
+}
+
+:root.green.dark {
+    --bg: #0B3D20;
+    --text: #D5F5E3;
+    --buttonBg: #1E8449;
+    --buttonText: #FFFFFF;
+    --navBg: #03150B;
+    --navText: #D5F5E3;
+    --navHover: #010A05;
 }
 
 html{
     scroll-behavior: smooth;
+    overscroll-behavior: none;
 }
 
 body{
@@ -30,11 +96,12 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Google-Sans";
+    overscroll-behavior: none;
 }
 
 button{
-    background-color: rgb(26, 102, 140);
-    color: white;
+    background-color: var(--buttonBg);
+    color: var(--navText);
     border:none;
     padding:10px;
     font-size: auto;
@@ -44,7 +111,7 @@ button{
 ul {
     margin: 0;
     padding: 0;
-    background-color: var(--text);
+    background-color: var(--navBg);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -58,23 +125,38 @@ ul li {
 
 ul li a {
     display: block;
-    color: white;
+    color: var(--navText);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 ul li a:hover{
-    background-color: black;
+    background-color: var(--navHover);
+}
+
+ul li button{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 ul li button:hover{
-    background-color: black;
+    background-color: var(--navHover);
+
 }
 
 .logo{
     height:50px;
     width:auto;
     display: block;
-    padding: 0 10px;
+    padding: 10px;
+
+}
+
+
+.enterButton{
+    background-color: var(--buttonBg);
+    color: var(--buttonText);
+    height: 300px;
+    width: 300px;
 }

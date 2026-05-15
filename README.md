@@ -6,4 +6,4 @@ This is goiing to descibe the features what this webiste has and it will try to 
 
 I plan to add features like make the nav bar prettier, and include code snipped on the webiste you can just copy and paste becuase it makes live easier. 
 
-I also want to 
+I also want to add css drop downs with copy and paste snip-its. I also try to find more inspo to add javascript themed. (maybe add a useless clicker)

@@ -2,35 +2,38 @@ const themes = ["", "blue", "yellow", "green"];
 var currentTheme = 0;
 var isDark = false;
 
-function themeCycle() {
-    document.documentElement.classList.remove(...themes.filter(t => t));
-    currentTheme++;
-    if (currentTheme > themes.length - 1) {
-        currentTheme = 0;
-    }
-    if (themes[currentTheme]) { // only adds a class if its not empty string.
-        document.documentElement.classList.add(themes[currentTheme]);
-    }
-    if(themes[currentTheme]==""){
-        document.getElementById("themeCycle").innerText = "Cycle Theme (Next: Blue)";
-    }else if(themes[currentTheme]=="blue"){
-        document.getElementById("themeCycle").innerText = "Cycle Theme (Next: Yellow)";
-    }else if(themes[currentTheme]=="yellow"){
-        document.getElementById("themeCycle").innerText = "Cycle Theme (Next: Green)";
-    }else if(themes[currentTheme]=="green"){
-        document.getElementById("themeCycle").innerText = "Cycle Theme (Next: Red)";
-    }
+function getLogoSrc(){
+    if(isDark) return "assets/img/SVG/Logo_White.svg"
+
+    const logoMap = {
+        "": "assets/img/SVG/Logo_Red.svg",
+        "blue": "assets/img/SVG/Logo_Blue.svg",
+        "yellow": "assets/img/SVG/Logo_Yellow.svg",
+        "green": "assets/img/SVG/Logo_Green.svg",
+    };
+
+    return logoMap[themes[currentTheme]] ?? "assets/img/SVG/logo_Red.svg";
 }
 
-function darkToggle(){
-    isDark = !isDark;
-    if(isDark){
-        document.documentElement.classList.add("dark");
-        document.getElementById("darkMode").innerText = "Toggle Dark Mode (toggled)";
-        document.getElementById("logo").src = "assets/img/SVG/logo_dark.svg";
-    }else{
-        document.documentElement.classList.remove("dark");
-        document.getElementById("darkMode").innerText = "Toggle Dark Mode";
-        document.getElementById("logo").src = "assets/img/SVG/logo_light.svg";
+function themeCycle() {
+    document.documentElement.classList.remove(...themes.filter(t => t));
+    currentTheme = (currentTheme + 1) % themes.length;
+
+    if (themes[currentTheme]) {
+        document.documentElement.classList.add(themes[currentTheme]);
     }
+
+    const nextTheme = themes[(currentTheme + 1) % themes.length] || "Red";
+    document.getElementById("themeCycleBtn").innerText =
+        `Cycle Theme (Next: ${nextTheme.charAt(0).toUpperCase() + nextTheme.slice(1)})`;
+    document.getElementById("logo").src = getLogoSrc();
+}
+
+function darkToggle() {
+    isDark = !isDark;
+    document.documentElement.classList.toggle("dark", isDark);
+    document.getElementById("darkMode").innerText =
+        isDark ? "Toggle Dark Mode (toggled)" : "Toggle Dark Mode";
+
+    document.getElementById("logo").src = getLogoSrc();
 }

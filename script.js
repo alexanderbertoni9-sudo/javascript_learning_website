@@ -92,3 +92,15 @@ help.forEach(help => {
         cursor.src = pointer;
     });
 });
+
+// Overlay and stuff in the making stuff in the gallery work
+
+const overlay = document.getElementById('overlay');
+
+document.getElementById('open_customCursor').onclick = () => {
+  overlay.classList.add('active');
+};
+
+document.getElementById('close_customCursor').onclick = () => {
+  overlay.classList.remove('active');
+};

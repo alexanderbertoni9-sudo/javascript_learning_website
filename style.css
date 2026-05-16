@@ -93,6 +93,9 @@
     --textBacking: #145C30;
 }
 
+*{
+    cursor: none;
+}
 html{
     scroll-behavior: smooth;
     overscroll-behavior: none;
@@ -195,6 +198,15 @@ ul li button:hover{
 
 }
 
+#cursor-follower{
+    position: fixed;
+    width: 63px; 
+    height: auto;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+
+}
 
 .enterButton{
     background-color: var(--buttonBg);

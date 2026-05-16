@@ -1,3 +1,5 @@
+// Theme Switching + Dark Mode toggle
+
 const themes = ["", "blue", "yellow", "green"];
 var currentTheme = 0;
 var isDark = false;
@@ -37,3 +39,36 @@ function darkToggle() {
 
     document.getElementById("logo").src = getLogoSrc();
 }
+
+// Custom Cursor
+
+const cursor = document.getElementById("cursor-follower");
+
+const pointer = "assets/cursor/cursor_pointer.png";
+const linkSelect = "assets/cursor/cursor_linkSelect.png";
+const textSelect = "assets/cursor/cursor_textSelect.png";
+const helpSelect = "assets/cursor/cursor_helpSelect.png";
+
+// Make cursor move 
+
+document.addEventListener("mousemove",function(e){
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+//Change cursor on hover of specific objects
+
+const buttons = document.querySelectorAll(".button_cursor");
+const text = document.getElementById("text_cursor");
+const help = document.getElementById("help_cursor")
+
+
+buttons.forEach(button => {
+    button.addEventListener("mouseenter", () => {
+        cursor.src = linkSelect;
+    });
+
+    button.addEventListener("mouseleave", () => {
+        cursor.src = pointer;
+    });
+});

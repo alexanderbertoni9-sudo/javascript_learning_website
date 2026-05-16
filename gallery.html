@@ -13,7 +13,6 @@
                 <li><a class="button_cursor" href="index.html">Home</a></li>
                 <li><a class="button_cursor" href="gallery.html">Gallery</a></li>
                 <li><a class="button_cursor" href="#about.html">About</a></li>
-                <li><a class="button_cursor" href="demo.html">Demo</a></li>
                 <li class="right-aligned">
                     <button id="themeCycleBtn" class="button_cursor" onclick="themeCycle()">Cycle Theme (Next: blue)</button>
                     <button id="darkMode" class="button_cursor" onclick="darkToggle()">Toggle Dark Mode</button>
@@ -38,13 +37,15 @@
         <div id="overlay">
             <div id="modal">
                 <div id = "modal-navbar">
-                    <button class = "tab-btn button_cursor active">HTML</button>
-                    <button class = "tab-btn button_cursor">CSS</button>
-                    <button class = "tab-btn button_cursor">JS</button>
+                    <button class = "tab-btn button_cursor active" data-tab = "html">HTML</button>
+                    <button class = "tab-btn button_cursor" data-tab = "css">CSS</button>
+                    <button class = "tab-btn button_cursor" data-tab = "js">JS</button>
                     <a class= "button_cursor right-aligned closeModal" id = "close_customCursor">X</a>
                 </div>
 
-                <div class = "tab-content" id = "tab-html">html stuff goes here<div>
+                <div class = "tab-content" id = "tab-html">html stuff goes here</div>
+                <div class = "tab-content hidden" id = "tab-css"> css stuff here</div>
+                <div class = "tab-content hidden" id = "tab-js"> js stuff here</div>
 
 
                 

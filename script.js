@@ -104,3 +104,22 @@ document.getElementById('open_customCursor').onclick = () => {
 document.getElementById('close_customCursor').onclick = () => {
   overlay.classList.remove('active');
 };
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.onclick = () => {
+
+    // hide all tabs
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.add('hidden');
+    });
+
+    // remove active from all buttons
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.remove('active');
+    });
+
+    // show the clicked one
+    document.getElementById('tab-' + btn.dataset.tab).classList.remove('hidden');
+    btn.classList.add('active');
+  };
+});

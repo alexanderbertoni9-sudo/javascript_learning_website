@@ -325,26 +325,6 @@ ul li button:hover{
     color: var(--bg)
 }
 
-
-
-
-/* All demo page styling */ 
-.demo{
-    background-color: white;
-    color:white;
+.hidden{
+    display: none;
 }
-
-.demo-text{
-    transform: rotate(8deg);
-    margin-top: 40vh;
-}
-
-.demo-button{
-    height: 300px;
-    width: 300px;
-    font-size: 3em;
-    color: white;
-    margin: 20px;
-    background-color: white;
-}
-

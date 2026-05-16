@@ -199,7 +199,7 @@ ul li button:hover{
 }
 
 #cursor-follower{
-    position: absolute;
+    position: fixed;
     width: 63px; 
     height: auto;
     pointer-events: none;
@@ -245,7 +245,30 @@ ul li button:hover{
     width: 30vh;
     background-color: var(--buttonBg);
     border: 5px solid var(--navBg);
-    /* border-radius: 4px;*/ /* To round Corner*/
+    /* border-radius: 4px;*/ /* To round Corners*/
     padding: 10px;
     box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
 }
+
+
+
+/* All demo page styling */ 
+.demo{
+    background-color: white;
+    color:white;
+}
+
+.demo-text{
+    transform: rotate(8deg);
+    margin-top: 40vh;
+}
+
+.demo-button{
+    height: 300px;
+    width: 300px;
+    font-size: 3em;
+    color: white;
+    margin: 20px;
+    background-color: white;
+}
+

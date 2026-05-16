@@ -59,8 +59,8 @@ document.addEventListener("mousemove",function(e){
 //Change cursor on hover of specific objects
 
 const buttons = document.querySelectorAll(".button_cursor");
-const text = document.getElementById("text_cursor");
-const help = document.getElementById("help_cursor")
+const text = document.querySelectorAll(".text_cursor");
+const help = document.querySelectorAll(".help_cursor");
 
 
 buttons.forEach(button => {
@@ -69,6 +69,26 @@ buttons.forEach(button => {
     });
 
     button.addEventListener("mouseleave", () => {
+        cursor.src = pointer;
+    });
+});
+
+text.forEach(text => {
+    text.addEventListener("mouseenter", () => {
+        cursor.src = textSelect;
+    });
+
+    text.addEventListener("mouseleave", () => {
+        cursor.src = pointer;
+    });
+});
+
+help.forEach(help => {
+    help.addEventListener("mouseenter", () => {
+        cursor.src = helpSelect;
+    });
+
+    help.addEventListener("mouseleave", () => {
         cursor.src = pointer;
     });
 });

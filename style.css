@@ -13,6 +13,7 @@
     --navBg: #7B1A26;
     --navText: #FADADD;
     --navHover: #4A0D15;
+    --textBacking: #F5A7B0;
 }
 
 :root.blue {
@@ -23,6 +24,7 @@
     --navBg: #0D3B5E;
     --navText: #D6EAF8;
     --navHover: #07202F;
+    --textBacking: #A8D0F0;
 }
 
 :root.yellow {
@@ -33,6 +35,7 @@
     --navBg: #6E5200;
     --navText: #FEF9E7;
     --navHover: #3D2D00;
+    --textBacking: #F9E4A0;
 }
 
 :root.green {
@@ -43,6 +46,7 @@
     --navBg: #0B3D20;
     --navText: #D5F5E3;
     --navHover: #062B12;
+    --textBacking: #A8E8C0;
 }
 
 :root.dark {
@@ -53,6 +57,7 @@
     --navBg: #1A0005;
     --navText: #FADADD;
     --navHover: #0D0002;
+    --textBacking: #8B2535;
 }
 
 :root.blue.dark {
@@ -63,6 +68,7 @@
     --navBg: #051520;
     --navText: #D6EAF8;
     --navHover: #020A10;
+    --textBacking: #1A4F72;
 }
 
 :root.yellow.dark {
@@ -73,6 +79,7 @@
     --navBg: #2A1F00;
     --navText: #FEF9E7;
     --navHover: #110C00;
+    --textBacking: #8B6800;
 }
 
 :root.green.dark {
@@ -83,6 +90,7 @@
     --navBg: #03150B;
     --navText: #D5F5E3;
     --navHover: #010A05;
+    --textBacking: #145C30;
 }
 
 html{
@@ -118,6 +126,17 @@ ul {
     list-style:none;
 }
 
+h1 {
+    display: block;
+    font-size: 10em;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+}
+
+p{
+    font-size: 1em;
+    color: var(--text)
+}
 
 ul li {
     float:left;
@@ -145,6 +164,29 @@ ul li button:hover{
 
 }
 
+.grow{
+  transition: transform 0.3s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.3); 
+}
+
+.body-center{
+    display: flex;
+    justify-content: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    font-size: 2em;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
 .logo{
     height:50px;
     width:auto;
@@ -159,4 +201,19 @@ ul li button:hover{
     color: var(--buttonText);
     height: 300px;
     width: 300px;
+}
+
+.background{
+    background-color: var(--textBacking);
+}
+
+.preface-body{
+    padding: 2vw;
+    font-size: 0.8em;
+}
+
+.right-aligned {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 }

@@ -199,7 +199,7 @@ ul li button:hover{
 }
 
 #cursor-follower{
-    position: fixed;
+    position: absolute;
     width: 63px; 
     height: auto;
     pointer-events: none;

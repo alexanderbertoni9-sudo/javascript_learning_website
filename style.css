@@ -217,3 +217,23 @@ ul li button:hover{
     display: flex;
     align-items: center;
 }
+
+.gallery{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 2.5vw;
+    gap: 3vw;
+    margin-right: 2.5vw;
+    margin-top:2.5vw;
+}
+
+.card {
+    height: 30vh;
+    width: 30vh;
+    background-color: var(--buttonBg);
+    border: 5px solid var(--navBg);
+    /* border-radius: 4px;*/ /* To round Corner*/
+    padding: 10px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}

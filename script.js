@@ -1,7 +1,7 @@
 // Theme Switching + Dark Mode toggle
 
 const themes = ["", "blue", "yellow", "green"];
-var currentTheme = 0;
+var currentTheme = 1;
 var isDark = false;
 
 function getLogoSrc(){
@@ -94,3 +94,15 @@ help.forEach(help => {
 });
 
 // Make Overlay work
+
+const open = document.getElementById("open");
+const modal_container = document.getElementById("modal-container");
+const close = document.getElementById("close");
+
+open.addEventListener("click", () => {
+    modal_container.classList.add("show");
+});
+
+close.addEventListener("click", () => {
+    modal_container.classList.remove("show");
+});

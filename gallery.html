@@ -3,6 +3,10 @@
         <link rel="stylesheet" href="style.css">
         <link rel = "icon" href = "assets/img/SVG/Logo_Black.svg">
         <title>Gallery</title>
+
+        <!-- For code snippet boxes-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     </head>
     <body>
         <img id = "cursor-follower" src = "assets/cursor/cursor_pointer.png">
@@ -28,33 +32,12 @@
             <!-- ts ugly as hell (the first one change the gif its sooo ugly)-->
             <div class = "card grow_gallery button_cursor" id = "open_customCursor"><img class = "gallery_preview" src = "assets/Gallery Previews/custom_cursor.gif"  ></div>
             <div class = "card"><img src = "assets/img/SVG/Logo_White.svg"></div>
-            <div class = "card"><img src = "assets/img/SVG/Logo_Red.svg"></div>
-            <div class = "card"><img src = "assets/img/SVG/Logo_Blue.svg"></div>
-            <div class = "card"><img src = "assets/img/SVG/Logo_Yellow.svg"></div>
-            <div class = "card"><img src = "assets/img/SVG/Logo_Green.svg"></div>
-        </div>
-
-        <div id="overlay">
-            <div id="modal">
-                <div id = "modal-navbar">
-                    <button class = "tab-btn button_cursor active" data-tab = "html">HTML</button>
-                    <button class = "tab-btn button_cursor" data-tab = "css">CSS</button>
-                    <button class = "tab-btn button_cursor" data-tab = "js">JS</button>
-                    <a class= "button_cursor right-aligned closeModal" id = "close_customCursor">X</a>
-                </div>
-
-                <div class = "tab-content" id = "tab-html">html stuff goes here</div>
-                <div class = "tab-content hidden" id = "tab-css"> css stuff here</div>
-                <div class = "tab-content hidden" id = "tab-js"> js stuff here</div>
-
-
-                
-            </div>
         </div>
 
 
 
 
+        
         <script src="script.js"></script>
     </body>
 </html>

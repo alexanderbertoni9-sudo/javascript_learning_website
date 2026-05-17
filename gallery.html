@@ -19,7 +19,7 @@
                 </li>
             </ul>
         </div>
-        
+
         <div class="center">
             <h1 class ="grow center text_cursor" >Gallery</h1>
         </div>
@@ -34,7 +34,7 @@
             <div class="modal">
                 <div class = "topbar"> 
                     <button class = "button_cursor close_button" id = "close">X</button>
-                    <p>↓ press a tab to get started!</p>
+                    <p id="tooltip1">↓ press a tab to get started!</p>
                 </div>
                 
                 <div class = "tab-group">
@@ -42,7 +42,7 @@
                     <!-- Tab 1 -->
                     <input type = "radio" name = "option" id = "1"/>
                     <label for ="1">
-                        <div class = "tab-name button_cursor">HTML</div>
+                        <div onclick="hide(document.getElementById('tooltip1'))" class = "tab-name button_cursor">HTML</div>
                         <div class = "tab-content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
@@ -99,7 +99,7 @@
                     <!-- Tab 2 -->
                     <input type = "radio" name = "option" id = "2"/>
                     <label for ="2">
-                        <div class = "tab-name button_cursor">CSS</div>
+                        <div onclick="hide(document.getElementById('tooltip1'))" class = "tab-name button_cursor">CSS</div>
                         <div class = "tab-content">
                             This is the styling 
                         </div>
@@ -108,7 +108,7 @@
                     <!-- Tab 3 -->
                     <input type = "radio" name = "option" id = "3"/>
                     <label for ="3">
-                        <div class = "tab-name button_cursor">JS</div>
+                        <div onclick="hide(document.getElementById('tooltip1'))" class = "tab-name button_cursor">JS</div>
                         <div class = "tab-content">
                             This is the functioanly (and the most imporant code)
                         </div>

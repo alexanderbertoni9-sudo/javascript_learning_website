@@ -106,3 +106,10 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
     modal_container.classList.remove("show");
 });
+
+// Hide the tool tip 
+
+
+function hide(element){
+    element.classList.add("hidden");
+}

@@ -373,6 +373,8 @@ input:checked + label .tab-content{
 .topbar p{
     color: color-mix(in srgb, var(--text) 50%, transparent);
 }
-input:checked .topbar p{
-    opacity: 0;
+
+.hidden{
+    display: none;
+    transition:0.5s;
 }

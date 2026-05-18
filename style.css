@@ -91,7 +91,6 @@
     --codeContentBg: #FFFFFF;
     --codeContentText: #0B3D20;
 }
-
 :root.dark {
     --bg: #5C1A22;
     --text: #FADADD;
@@ -109,8 +108,8 @@
     --codeTabInactive: #5C1A22;
     --codeBorder: #6B1520;
     --codeScrollbar: #C0394B;
-    --codeContentBg: #FFFFFF;
-    --codeContentText: #3D0A10;
+    --codeContentBg: #1A0005;
+    --codeContentText: #FADADD;
 }
 
 :root.blue.dark {
@@ -130,8 +129,8 @@
     --codeTabInactive: #0D3B5E;
     --codeBorder: #1A4F72;
     --codeScrollbar: #4A9FD8;
-    --codeContentBg: #FFFFFF;
-    --codeContentText: #051520;
+    --codeContentBg: #051520;
+    --codeContentText: #D6EAF8;
 }
 
 :root.yellow.dark {
@@ -151,8 +150,8 @@
     --codeTabInactive: #6E5200;
     --codeBorder: #8B6800;
     --codeScrollbar: #E8B020;
-    --codeContentBg: #FFFFFF;
-    --codeContentText: #3D2E00;
+    --codeContentBg: #2A1F00;
+    --codeContentText: #FEF9E7;
 }
 
 :root.green.dark {
@@ -172,8 +171,8 @@
     --codeTabInactive: #0B3D20;
     --codeBorder: #145C30;
     --codeScrollbar: #3DBD70;
-    --codeContentBg: #FFFFFF;
-    --codeContentText: #041F10;
+    --codeContentBg: #03150B;
+    --codeContentText: #D5F5E3;
 }
 
 *{

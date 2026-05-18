@@ -113,3 +113,24 @@ close.addEventListener("click", () => {
 function hide(element){
     element.classList.add("hidden");
 }
+
+
+// Copy and paste button 
+
+function copyClipboard(targetID){
+    var copyText = document.getElementById(targetID).innerText;
+    var input = document.createElement("input");
+    input.value = copyText;
+    document.body.appendChild(input);
+    input.select();
+    navigator.clipboard.writeText(copyText);
+    document.body.removeChild(input);
+
+}
+
+function feedback(button){
+    button.innerText = "Coppied!"
+    setTimeout(function(){
+        button.innerText = "Copy";
+    },2000)
+}

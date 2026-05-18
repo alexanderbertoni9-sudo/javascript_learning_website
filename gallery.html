@@ -44,8 +44,9 @@
                     <label for ="1">
                         <div onclick="hide(document.getElementById('tooltip1'))" class = "tab-name button_cursor">HTML</div>
                         <div class = "tab-content">
-                           <pre><code class = "text_cursor">
-&lt;img id = "cursor-follower" src = "assets/cursor/cursor_pointer.png"&gt;
+                            <button class="button_cursor" onclick="copyClipboard('html1'); feedback(this)">Copy</button>
+                           <pre><code id = "html1" class = "text_cursor">
+&lt;img id = "cursor-follower" src = "your_cursor_image_here"&gt;
                             </code></pre>
                         </div>
                     </label>
@@ -55,9 +56,20 @@
                     <label for ="2">
                         <div onclick="hide(document.getElementById('tooltip1'))" class = "tab-name button_cursor">CSS</div>
                         <div class = "tab-content">
-                            <pre><code class = "text_cursor">
+                            <button class="button_cursor" onclick="copyClipboard('css1'); feedback(this)">Copy</button>
+                            <pre><code id = "css1" class = "text_cursor">
 *{
     cursor: none;
+}
+
+/* Adjust width and height to your liking */ 
+#cursor-follower{
+    position: fixed;
+    width: 63px; 
+    height: auto;
+    pointer-events: none;
+    transform: translate(-50%,-50%); /* Use this to adjust the location of the picture */
+    z-index: 9999;
 }
                             </code></pre>
                         </div>
@@ -68,7 +80,9 @@
                     <label for ="3">
                         <div onclick="hide(document.getElementById('tooltip1'))" class = "tab-name button_cursor">JS</div>
                         <div class = "tab-content">
-                            <pre><code class = "text_cursor">
+                            <button class="button_cursor" onclick="copyClipboard('js1'); feedback(this)">Copy</button>
+                            <pre><code id = "js1" class = "text_cursor">
+//Don't Forget to update the image paths to your actual cursor images!!
 
 const cursor = document.getElementById("cursor-follower");
 

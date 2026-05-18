@@ -1,7 +1,7 @@
 // Theme Switching + Dark Mode toggle
 
 const themes = ["", "blue", "yellow", "green"];
-var currentTheme = 1;
+var currentTheme = 0;
 var isDark = false;
 
 function getLogoSrc(){

@@ -3,6 +3,10 @@
     src: url('./assets/fonts/GoogleSans-VariableFont_GRAD\,opsz\,wght.ttf')
 }
 
+@font-face {
+    font-family: "Intel";
+    src: url(./assets/fonts/IntelOneMono-VariableFont_wght.ttf);
+}
 /* Color Themes and stuff*/
 :root { /* Red - default */
     --bg: #FADADD;
@@ -25,7 +29,7 @@
     --navText: #D6EAF8;
     --navHover: #07202F;
     --textBacking: #A8D0F0;
-    --modalBg: #dfe1ff;
+    --modalBg: #ebecff;
 }
 
 :root.yellow {
@@ -103,6 +107,7 @@
 *{
     cursor: none;
 }
+
 html{
     scroll-behavior: smooth;
     overscroll-behavior: none;
@@ -115,6 +120,7 @@ body{
     padding: 0;
     font-family: "Google-Sans";
     overscroll-behavior: none;
+    cursor: none;
 }
 
 button{
@@ -331,8 +337,10 @@ input{
     padding: 10px 30px;
     box-sizing: border-box;
     transition: 0.3s;
-
 }
+
+
+
 input:checked + label .tab-name{
     color: var(--text);
     background-color: var(--textBacking);
@@ -347,8 +355,8 @@ input:checked + label .tab-name{
     position: absolute;
     top: 50px;
     left:0;
-    background: white;
-    color: black;
+    background: var(--textBacking);
+    color: var(--text);
     padding: 15px;
     box-sizing: border-box;
     border-radius: 5px;
@@ -358,6 +366,7 @@ input:checked + label .tab-name{
     overflow-y: auto;
     height: calc(100% - 70px); /* subtracts the tab bar height */
     width: calc(100% - 20px);  /* accounts for the margin */
+    font-family: "Intel";
 }
 
 input:checked + label .tab-content{
@@ -374,7 +383,11 @@ input:checked + label .tab-content{
     color: color-mix(in srgb, var(--text) 50%, transparent);
 }
 
+.topbar p:hover{
+    color: var(--text);
+}
+
 .hidden{
+    transition: 0.5s ease;
     display: none;
-    transition:0.5s;
 }

@@ -347,6 +347,11 @@ ul li button:hover{
     width: 100%;
 }
 
+.galleryIcon{
+    height: 30vh;
+    width: 30vh;
+}
+
 /* Pop up*/
 
 .modal-container{
@@ -480,3 +485,6 @@ input:checked + label .tab-content{
     transition: 0.5s ease;
     display: none;
 }
+
+/* end of the pop-up styling */
+

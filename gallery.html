@@ -25,15 +25,15 @@
         </div>
 
         <div class = "gallery">
-            <div id = "open" class = "card grow_gallery button_cursor" id = "open_customCursor"><img class = "gallery_preview" src = "assets/Gallery Previews/custom_cursor_NEW.gif"  ></div>
-            <div class = "card"><img src = "assets/img/SVG/Logo_White.svg"></div>
+            <div id = "custom_cursor_open" onclick = "openOverlay('custom_cursor_modal')" class = "card grow_gallery button_cursor" id = "open_customCursor"><img class = "gallery_preview" src = "assets/Gallery Previews/custom_cursor_NEW.gif"></div>
+            <div id = "entry2" onclick = "openOverlay('entry2_modal')" class = "card grow_gallery button_cursor"><img class = "galleryIcon" src = "assets/img/comingSoon.png"></div>
         </div>
 
         <!-- Popup for the custom cursor code stuff -->
-        <div class="modal-container" id="modal-container">
+        <div class="modal-container" id="custom_cursor_modal">
             <div class="modal">
                 <div class = "topbar"> 
-                    <button class = "button_cursor close_button" id = "close">X</button>
+                    <button class = "button_cursor close_button" onclick = "closeOverlay('custom_cursor_modal')">X</button>
                     <p class = "tooltip help_cursor" id="tooltip1">↓ press a tab to get started!</p>
                 </div>
                 
@@ -58,7 +58,7 @@
                         <div class = "tab-content">
                             <button class="button_cursor" onclick="copyClipboard('css1'); feedback(this)">Copy</button>
                             <pre><code id = "css1" class = "text_cursor">
-*{
+*
     cursor: none;
 }
 
@@ -144,6 +144,53 @@ help.forEach(help => {
 
             </div>
         </div>
+
+        <!-- Popup for the second gallery entry -->
+        <div class="modal-container" id="entry2_modal">
+            <div class="modal">
+                <div class = "topbar"> 
+                    <button class = "button_cursor close_button" onclick = "closeOverlay('entry2_modal')">X</button>
+                    <p class = "tooltip help_cursor" id="tooltip2">↓ press a tab to get started!</p>
+                </div>
+                
+                <div class = "tab-group">
+                    
+                    <!-- Tab 1 -->
+                    <input type = "radio" name = "option" id = "4"/>
+                    <label for ="4">
+                        <div onclick="hide(document.getElementById('tooltip2'))" class = "tab-name button_cursor">HTML</div>
+                        <div class = "tab-content">
+                            <button class="button_cursor" onclick="copyClipboard('html2'); feedback(this)">Copy</button>
+                            <pre><code id = "html2" class = "text_cursor">
+placeholder html
+                            </code></pre>
+                        </div>
+                    </label>
+
+                    <!-- Tab 2 -->
+                    <input type = "radio" name = "option" id = "5"/>
+                    <label for ="5">
+                        <div onclick="hide(document.getElementById('tooltip2'))" class = "tab-name button_cursor">CSS</div>
+                        <div class = "tab-content">
+                            <button class="button_cursor" onclick="copyClipboard('css2'); feedback(this)">Copy</button>
+                            <pre><code id = "css2" class = "text_cursor">
+placeholde css
+                            </code></pre>
+                        </div>
+                    </label>
+                    
+                    <!-- Tab 3 -->
+                    <input type = "radio" name = "option" id = "6"/>
+                    <label for ="6">
+                        <div onclick= "hide(document.getElementById('tooltip2'))" class = "tab-name button_cursor">JS</div>
+                        <div class = "tab-content">
+                            <button class="button_cursor" onclick="copyClipboard('js2'); feedback(this)">Copy</button>
+                            <pre><code id = "js2" class = "text_cursor">
+placeholder javascript
+            </div>
+        </div>
+
+
 
         <script src="script.js"></script>
     </body>

@@ -95,17 +95,13 @@ help.forEach(help => {
 
 // Make Overlay work
 
-const open = document.getElementById("open");
-const modal_container = document.getElementById("modal-container");
-const close = document.getElementById("close");
+function openOverlay(targetModal) {
+    document.getElementById(targetModal).classList.add("show");
+}
 
-open.addEventListener("click", () => {
-    modal_container.classList.add("show");
-});
-
-close.addEventListener("click", () => {
-    modal_container.classList.remove("show");
-});
+function closeOverlay(targetModal) {
+    document.getElementById(targetModal).classList.remove("show");
+}
 
 // Hide the tool tip 
 
